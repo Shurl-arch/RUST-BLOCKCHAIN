@@ -21,13 +21,13 @@ struct SensorData {
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     // --- InfluxDB setup ---
-    let influx_url = "http://localhost:8086/api/v2/write?org=ITS&bucket=ISImonitor&precision=s";
-    let influx_token = "mTjO4KT4rlVLw3IISNiewi_JWxiErLd67bxRbx_oSrHmVz8-eTjcqT_IxBEoTSJRud40uBsz9uaPC7aYMOrwZQ==";
+    let influx_url = "http://localhost:8086/api/v2/write?org=ITS&bucket=ISI4&precision=s";
+    let influx_token = "M3BnflC0Me8WJzgVaCpJpV20s_gWz3Z5_-zKCiraezJpQPVOAH4tOTELasbwPl-Ux-uZuJtfPpoQK_T9biOQpg==";
     let http_client = Client::new();
 
     // --- Ethereum setup ---
     let provider = Provider::<Http>::try_from("http://localhost:8545")?;
-    let wallet: LocalWallet = "0x3139805a7b405bb7bd369897e0538cafcb156885b1933e9932fd35eab3da35bc"
+    let wallet: LocalWallet = "0x74790e5b640580fb4d046557a56dee20559466305d527242c905b2afca9f9d9e"
         .parse::<LocalWallet>()?    
         .with_chain_id(1337u64);
     let client = Arc::new(SignerMiddleware::new(provider, wallet));
@@ -93,7 +93,7 @@ async fn main() -> anyhow::Result<()> {
                                 println!("✅ InfluxDB: data written");
                             }
                             Ok(resp) => {
-                                println!("⚠️ InfluxDB error: {}", resp.status());
+                                println!("⚠ InfluxDB error: {}", resp.status());
                             }
                             Err(e) => {
                                 println!("❌ InfluxDB HTTP error: {}", e);
@@ -129,4 +129,3 @@ let tx = method_call.send().await;
         });
     }
 }
-
