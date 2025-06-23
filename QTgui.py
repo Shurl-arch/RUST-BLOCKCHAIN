@@ -12,8 +12,8 @@ from collections import deque
 # Konfigurasi InfluxDB
 INFLUX_QUERY_URL = "http://localhost:8086/api/v2/query"
 ORG = "ITS"
-BUCKET = "ISImonitor"
-TOKEN = "mTjO4KT4rlVLw3IISNiewi_JWxiErLd67bxRbx_oSrHmVz8-eTjcqT_IxBEoTSJRud40uBsz9uaPC7aYMOrwZQ=="
+BUCKET = "ISI4"
+TOKEN = "QK5FsI_HzZt8NcCTcg9nxhfLZ-3VYPozDzHsHx3mRaubzlxE8C0siGUmjgE3JSLpcDAfKNboTvvml0wfPvJw_A=="
 
 # Riwayat data
 history_length = 50
