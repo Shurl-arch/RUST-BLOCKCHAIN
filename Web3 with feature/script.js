@@ -1,4 +1,4 @@
-const contractAddress = "0xf7d269cd81b82775a4646d8a2532c25028e9c38a"; // Ganti dengan alamat kontrak dari Ganache
+const contractAddress = "0xba4b6fc8fe7266dbeb91e12e821d8e097dac7f89"; // Ganti dengan alamat kontrak dari Ganache
 const abiPath = "abi/SensorStorage.abi";
 
 let chart;
@@ -144,6 +144,6 @@ async function confirmLoading() {
   qrCodeContainer.innerHTML = `
     <div style="text-align: center; font-size: 18px;">
     <p><strong>Silahkan Konfirmasikan Loading In Barang pada Kontak berikut:</strong></p>
-    <img src="img/qrcode.png" alt="QR Code Kontak Konfirmasi" width="450" />
-  `;
+    <img src="img/qrcode.png" alt="QR Code Kontak Konfirmasi" width="450" />
+  `;
 }
