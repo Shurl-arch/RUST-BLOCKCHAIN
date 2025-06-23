@@ -1,4 +1,4 @@
-const contractAddress = "0x8f39bd4caa85c22dbd8b2e8232ba0aa35766c2da"; // Ganti dengan alamat kontrak dari Ganache
+const contractAddress = "0x0f2602a7ebd35a10ccfb78aba73c637ed56da6a2"; // Ganti dengan alamat kontrak dari Ganache
 const abiPath = "abi/SensorStorage.abi";
 
 let chart;
@@ -75,7 +75,7 @@ function renderChart(labels, temps, hums) {
       responsive: true,
       scales: {
         y: { beginAtZero: true }
-      }
-    }
-  });
+      }
+    }
+  });
 }
